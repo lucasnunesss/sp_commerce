@@ -9,7 +9,14 @@ const config = {
         preset: "default"
       }
     ],
-    "postcss-nested"
+    "postcss-nested",
+    [
+      "postcss-custom-media", {
+        preserv: false
+      }
+    ],
+    "postcss-font-magician"
+ 
   ]
 };
 
