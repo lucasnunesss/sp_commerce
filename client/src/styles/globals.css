@@ -44,7 +44,7 @@ body {
   .boot-div{
     position: relative;
     width: 100%;
-    height: 400px; /* Definir a altura como 100% da altura da janela */
+    height: 500px; /* Definir a altura como 100% da altura da janela */
    
   }
   .boot-img{
