@@ -41,6 +41,7 @@ body {
 
 @custom-media --sm (max-width: 599px);
 @media (--sm) {
+ 
   .boot-div{
     position: relative;
     width: 100%;
@@ -51,7 +52,7 @@ body {
     position: absolute;
     
     min-width: 100%;
-    min-height: 100%;
+    min-height:100%;
     object-fit: cover;
   }
 
@@ -61,7 +62,7 @@ body {
     top: 100;
     max-width: 100%;
     width: 100%;
-    text-transform: capitalize;
+    text-transform: uppercase;
     font-weight: 600;
     font-family: 'Oswald';
     color: #ffffff;
@@ -73,33 +74,47 @@ body {
   }
 
   .boot-text {
+    
     span{
       font-size: 20px;
       font-weight: 500;
     }
     .boot-title{
-      width: 400px;
+      width: 500px;
       max-width: 100%;
       margin: auto;
       h1{
         margin-top: 10px;
         font-size: 55px;
-        
+        margin-bottom: 10px;
         .mark{
-
+          display: inline;
           border-radius: 10px;
-          padding: 0px 15px 5px 5px;
+          padding: 0px 15px 5px 0px;
           background-color: #AF101A;
           font-style: italic;
         }
       }
     }
   }
+
+  .text-itens{
+    font-family: 'Roboto';
+  }
+
+
 }
 
-  
+
 @custom-media --very-sm (max-width: 399px);
 @media (--very-sm) {
+  .swiper-button-next, .swiper-button-prev{
+    display: none;
+    background: transparent;
+    cursor: none;
+    pointer-events: none;
+    color: transparent;
+  }
   .boot-div{
     position: relative;
     width: 100%;

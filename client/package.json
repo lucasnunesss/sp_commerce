@@ -10,7 +10,11 @@
   },
   "dependencies": {
     "autoprefixer": "^10.4.20",
-    "next": "15.1.6",
+    "dompurify": "^3.2.4",
+    "html-react-parser": "^5.2.2",
+    "isomorphic-dompurify": "^2.21.0",
+    "jsdom": "^26.0.0",
+    "next": "^15.1.6",
     "postcss-nested": "^7.0.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
