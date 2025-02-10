@@ -27,9 +27,9 @@
 }
 
 body {
-
-  color: var(--foreground);
-  background: var(--background);
+  
+  color: var(--background);
+  background: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -69,7 +69,7 @@ body {
     
    
     text-shadow: 
-    9.5px 11.5px 34px #0000004d, 8.5px -.5px 1px #0000004d
+    9.5px 11.5px 34px #0000004d, 8.5px -.5px 1px #0000004d;
   
   }
 
@@ -102,6 +102,11 @@ body {
     font-family: 'Roboto';
   }
 
+  .span-h2{
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+  }
+
 
 }
 
@@ -121,4 +126,8 @@ body {
     height: 600px; /* Definir a altura como 100% da altura da janela */
    
   }
+}
+
+.txt-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
