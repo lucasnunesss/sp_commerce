@@ -37,97 +37,21 @@ body {
   background-color: #0B131C;
 }
 
-
-
-@custom-media --sm (max-width: 599px);
-@media (--sm) {
- 
-  .boot-div{
-    position: relative;
-    width: 100%;
-    height: 500px; /* Definir a altura como 100% da altura da janela */
-   
-  }
-  .boot-img{
-    position: absolute;
-    
-    min-width: 100%;
-    min-height:100%;
-    object-fit: cover;
-  }
-
-  .boot-text{
-    position: relative;
-    text-align: center;
-    top: 100;
-    max-width: 100%;
-    width: 100%;
-    text-transform: uppercase;
-    font-weight: 600;
-    font-family: 'Oswald';
-    color: #ffffff;
-    
-   
-    text-shadow: 
-    9.5px 11.5px 34px #0000004d, 8.5px -.5px 1px #0000004d;
-  
-  }
-
-  .boot-text {
-    
-    span{
-      font-size: 20px;
-      font-weight: 500;
-    }
-    .boot-title{
-      width: 500px;
-      max-width: 100%;
-      margin: auto;
-      h1{
-        margin-top: 10px;
-        font-size: 55px;
-        margin-bottom: 10px;
-        .mark{
-          display: inline;
-          border-radius: 10px;
-          padding: 0px 15px 5px 0px;
-          background-color: #AF101A;
-          font-style: italic;
-        }
-      }
-    }
-  }
-
-  .text-itens{
-    font-family: 'Roboto';
-  }
-
-  .span-h2{
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black;
-  }
-
-
+nav {
+  font-family: "Roboto";
 }
 
-
-@custom-media --very-sm (max-width: 399px);
-@media (--very-sm) {
-  .swiper-button-next, .swiper-button-prev{
-    display: none;
-    background: transparent;
-    cursor: none;
-    pointer-events: none;
-    color: transparent;
-  }
-  .boot-div{
-    position: relative;
-    width: 100%;
-    height: 600px; /* Definir a altura como 100% da altura da janela */
-   
-  }
+nav li{
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
 }
 
-.txt-shadow {
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+.nav-icons a{
+  position: relative;
 }
+
+.article-bg{
+  font-family: "Oswald";
+}
+
