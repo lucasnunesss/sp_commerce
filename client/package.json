@@ -14,15 +14,18 @@
     "@fortawesome/free-regular-svg-icons": "^6.7.2",
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
+    "@reduxjs/toolkit": "^2.5.1",
     "autoprefixer": "^10.4.20",
     "dompurify": "^3.2.4",
     "html-react-parser": "^5.2.2",
     "isomorphic-dompurify": "^2.21.0",
     "jsdom": "^26.0.0",
+    "mongoose": "^8.10.1",
     "next": "^15.1.6",
     "postcss-nested": "^7.0.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-redux": "^9.2.0",
     "swiper": "^11.2.2"
   },
   "devDependencies": {

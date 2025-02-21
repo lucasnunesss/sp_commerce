@@ -9,11 +9,16 @@ import {faMagnifyingGlass, faCartShopping, faBars} from "@fortawesome/free-solid
 import useWindowSize from '@/hooks/useWindowSize'
 
 import Sidebar from './Sidebar'
+import { useSelector } from 'react-redux'
+import SideCart from './SideCart'
+import { RootState } from '@/store'
 const Header = () => {
     const width = useWindowSize() || 1000
     const [clickMenu, setMenu] = useState(false);
-
+    const cartQtd = useSelector((state: RootState) => state.cart.qtd)
+    const [clickCart, setCart] = useState(false)
   return (
+    <>
     <header className='fixed flex justify-between items-center py-[15px] px-[30px] h-24 z-30  w-full'>
       {clickMenu && <Sidebar />}
         {width < 765 ? (
@@ -55,13 +60,20 @@ const Header = () => {
         <FontAwesomeIcon className='text-white w-5 h-5' icon={faHeart} />
         <span className='absolute top-[-5px] right-[-10px] bg-red-600 text-white rounded-[50%] text-[12px] py-[2px] px-[6px]'>0</span>
       </a>
-      <a href="#" >
+      <a href="#" onClick={() => setCart(!clickCart)} >
         <FontAwesomeIcon className='text-white w-5 h-5' icon={faCartShopping} />
-        <span className='absolute top-[-5px] right-[-10px] bg-red-600 text-white rounded-[50%] text-[12px] py-[2px] px-[6px]'>0</span>
+        <span className='absolute top-[-5px] right-[-10px] bg-red-600 text-white rounded-[50%] text-[12px] py-[2px] px-[6px]'>{cartQtd}</span>
         <span className='hidden md:block md:absolute mr-[5px] text-[14px]'>R$9,00</span>
       </a>
       </div>
     </header>
+
+      {clickCart && (
+        <div>
+          <SideCart setCard={setCart} />
+        </div>
+      )}
+    </>
   )
 }
 
