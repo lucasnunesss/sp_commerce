@@ -2,8 +2,9 @@
 
 import Image from "next/image";
 
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/store";
+import { addProduct, subtractProduct } from "@/slice";
 
 type Card = {
   setCard: (value: boolean) => void;
@@ -11,6 +12,16 @@ type Card = {
 
 const SideCart = ({setCard}: Card) => {
   const cart = useSelector((state: RootState) => state.cart)
+  const dispatch = useDispatch()
+
+
+  const subtractItem = (data: Product) => {
+    dispatch(subtractProduct({...data}))
+  }
+
+  const addItem = (data) => {
+    dispatch(addProduct({...data, price: data.price}))
+  }
   return (
  
 
@@ -31,9 +42,9 @@ const SideCart = ({setCard}: Card) => {
                   <p className="text-gray-600">R${data.price.toFixed(2)}</p>
                 </div>
                 <div className="flex items-center gap-2">
-                  <button className="px-2 py-1 border">-</button>
-                  <span>{cart.qtd}</span>
-                  <button className="px-2 py-1 border">+</button>
+                  <button className="px-2 py-1 border" onClick={() => subtractItem(data)}>-</button>
+                  <span>{data.qtd}</span>
+                  <button className="px-2 py-1 border" onClick={() => addItem(data)}>+</button>
                 </div>
               </div>
               ))}

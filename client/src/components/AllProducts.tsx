@@ -3,6 +3,7 @@ import useWindowSize from '@/hooks/useWindowSize'
 import { addProduct } from '@/slice'
 import { RootState } from '@/store'
 import Image from 'next/image'
+
 import { useDispatch, useSelector } from 'react-redux'
 
 type Data = {
@@ -18,11 +19,13 @@ const AllProducts = ({data}: Data) => {
     const cart = useSelector((state: RootState) => state.cart)
     console.log("cart", cart)
     const dispatch = useDispatch()
+  
     const submitHandle = (product: Product) => {
-    
+ 
         dispatch(
 
-          addProduct({products: product, price: product.price})
+          addProduct({...product, price: product.price})
+      
         )
 
 

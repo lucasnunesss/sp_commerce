@@ -17,4 +17,5 @@ type Product = {
   img: string;
   title: string;
   price: number;
+  qtd: number;
 };
