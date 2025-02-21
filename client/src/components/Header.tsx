@@ -16,6 +16,7 @@ const Header = () => {
     const width = useWindowSize() || 1000
     const [clickMenu, setMenu] = useState(false);
     const cartQtd = useSelector((state: RootState) => state.cart.qtd)
+    const cartTotal = useSelector((state: RootState) => state.cart.total)
     const [clickCart, setCart] = useState(false)
   return (
     <>
@@ -63,7 +64,7 @@ const Header = () => {
       <a href="#" onClick={() => setCart(!clickCart)} >
         <FontAwesomeIcon className='text-white w-5 h-5' icon={faCartShopping} />
         <span className='absolute top-[-5px] right-[-10px] bg-red-600 text-white rounded-[50%] text-[12px] py-[2px] px-[6px]'>{cartQtd}</span>
-        <span className='hidden md:block md:absolute mr-[5px] text-[14px]'>R$9,00</span>
+        <span className='hidden md:block md:absolute mr-[5px] text-[14px]'>{cartTotal}</span>
       </a>
       </div>
     </header>

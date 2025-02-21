@@ -44,6 +44,7 @@ const cartSlice = createSlice({
           exidtingProduct.qtd--;
           state.total -= action.payload.price
         }
+      state.qtd--
        
       } 
     }

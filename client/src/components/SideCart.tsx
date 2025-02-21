@@ -19,7 +19,7 @@ const SideCart = ({setCard}: Card) => {
     dispatch(subtractProduct({...data}))
   }
 
-  const addItem = (data) => {
+  const addItem = (data: Product) => {
     dispatch(addProduct({...data, price: data.price}))
   }
   return (
